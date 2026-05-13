@@ -23,8 +23,11 @@ fetch("https://rickandmortyapi.com/api/character")
                     </div>
                 </div>
             </div>
-
+            
             `;
         });
-    });
+         
+            function getRandomInt(20) {
+          return Math.floor(Math.random() * 20);}
 
+    });

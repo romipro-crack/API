@@ -13,6 +13,7 @@ document.getElementById("personajes").innerHTML += `
                         <p>
                             ${personaje.species}
                         </p>
+                        
                     </div>
                 </div>
             </div>
@@ -20,3 +21,6 @@ document.getElementById("personajes").innerHTML += `
             `;
         });
     });
+    function getRandomInt(personaje) {
+  return Math.floor(Math.random() * personaje);
+}
