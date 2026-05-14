@@ -1,6 +1,7 @@
 fetch("https://rickandmortyapi.com/api/character")
     .then(respuesta => respuesta.json())
     .then(datos => {
+       
         datos.results.forEach(personaje => {
             document.getElementById("personajes").innerHTML += `
             <div class="col-md-3 mb-4">
@@ -26,8 +27,25 @@ fetch("https://rickandmortyapi.com/api/character")
             
             `;
         });
-         
-            function getRandomInt(20) {
-          return Math.floor(Math.random() * 20);}
-
+    
     });
+
+
+
+function GenerarPersonaje() {
+    let numeroAleatorio = Math.floor(Math.random()*20);
+    
+    fetch("https://rickandmortyapi.com/api/character")
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+     
+     
+        document.getElementById("nombre").innerText=datos.results[numeroAleatorio].name;
+        document.getElementById("id_personaje").innerText=datos.results[numeroAleatorio].id;
+        document.getElementById("imagen").src=datos.results[numeroAleatorio].image;
+        document.getElementById("especie_p").innerText=datos.results[numeroAleatorio].species;
+        
+        console.log(datos.results[numeroAleatorio].gender);
+
+            });
+    }

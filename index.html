@@ -8,26 +8,34 @@
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<br>
 
-<body class="bg-dark text-white btn-successe">
-    <div class="container mt-5">
+
+<body class=" text-white btn-successe">
+    <div class="container bg-info mt-5">
+        
         <h1 class="text-center mb-4">
             Personajes de Rick and Morty
-           <div class="card p-3 text-center mb-4 bg-dark text-white btn-successe">
-                <button class="btn btn-primary">
-                 onclick=Traer personajes
-                </button>
-                </div>
-            <div class="row" id="personajes">
-
-            </div>
         </h1>
+        <div class="row mb-2 justify-content-center">
+            <div class="text-center col-4">
+                <div class="card">
+                    <div class="card-header" >
+                       <img id="imagen" src="" alt="" class="card-img-top" >
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title" id="nombre" >Nombre Personaje</div>
+                        <div id="id_personaje">id Personaje</div>
+                        <div id="especie">especie Personaje</div>
+                        <button onclick="GenerarPersonaje()" class="btn btn-success">Generar Personaje</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border" id="personajes">
+
+        </div>
     </div>
-
-
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
